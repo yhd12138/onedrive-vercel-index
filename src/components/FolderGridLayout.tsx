@@ -101,7 +101,7 @@ const FolderGridLayout = ({
           >
             <FontAwesomeIcon icon={['far', 'copy']} size="lg" />
           </button>
-	  {/* To hide the Download Button of selected Items. 
+          {/* To hide the Download Button of selected Items. 
           {totalGenerating ? (
             <Downloading title={t('Downloading selected files, refresh page to cancel')} style="p-1.5" />
           ) : (
@@ -114,7 +114,7 @@ const FolderGridLayout = ({
               <FontAwesomeIcon icon={['far', 'arrow-alt-circle-down']} size="lg" />
             </button>
           )}
-		  To hide the Download Button of selected Items. */}
+          To hide the Download Button of selected Items. */}
         </div>
       </div>
 
@@ -173,7 +173,7 @@ const FolderGridLayout = ({
                   </span>
                   To hide the Copy Button of any Items. */}
                   <a
-                    title={t('Download file')}
+                    title={t('OneDrive Direct Download')}
                     className="cursor-pointer rounded px-1.5 py-1 hover:bg-gray-300 dark:hover:bg-gray-600"
                     href={`https://${host_direct}/api/raw/?path=${getItemPath(c.name)}${
                       hashedToken ? `&odpt=${hashedToken}` : ''
@@ -181,10 +181,19 @@ const FolderGridLayout = ({
                   >
                     <FontAwesomeIcon icon={['far', 'arrow-alt-circle-down']} />
                   </a>
-				  <a
-                    title={t('Download file via Proxy')}
+                  <a
+                    title={t('Proxy Download (IPv4)')}
                     className="cursor-pointer rounded px-1.5 py-1 hover:bg-gray-300 dark:hover:bg-gray-600"
                     href={`https://${host_proxy}/api/raw/?path=${getItemPath(c.name)}${
+                      hashedToken ? `&odpt=${hashedToken}` : ''
+                    }`}
+                  >
+                    <FontAwesomeIcon icon={['far', 'arrow-alt-circle-down']} />
+                  </a>
+                  <a
+                    title={t('Proxy Download (IPv6)')}
+                    className="cursor-pointer rounded px-1.5 py-1 hover:bg-gray-300 dark:hover:bg-gray-600"
+                    href={`https://${host_proxy6}/api/raw/?path=${getItemPath(c.name)}${
                       hashedToken ? `&odpt=${hashedToken}` : ''
                     }`}
                   >
