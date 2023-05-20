@@ -87,6 +87,7 @@ const FolderListLayout = ({
             >
               <FontAwesomeIcon icon={['far', 'copy']} size="lg" />
             </button>
+            {/* To hide the Download Button of selected Items. 
             {totalGenerating ? (
               <Downloading title={t('Downloading selected files, refresh page to cancel')} style="p-1.5" />
             ) : (
@@ -99,6 +100,7 @@ const FolderListLayout = ({
                 <FontAwesomeIcon icon={['far', 'arrow-alt-circle-down']} size="lg" />
               </button>
             )}
+            To hide the Download Button of selected Items. */}
           </div>
         </div>
       </div>
@@ -147,6 +149,7 @@ const FolderListLayout = ({
             </div>
           ) : (
             <div className="hidden p-1.5 text-gray-700 dark:text-gray-400 md:flex">
+              {/* To hide the Copy Button of any Items. 
               <span
                 title={t('Copy raw file permalink')}
                 className="cursor-pointer rounded px-1.5 py-1 hover:bg-gray-300 dark:hover:bg-gray-600"
@@ -159,6 +162,7 @@ const FolderListLayout = ({
               >
                 <FontAwesomeIcon icon={['far', 'copy']} />
               </span>
+              To hide the Copy Button of any Items. */}
               <a
                 title={t('Download file')}
                 className="cursor-pointer rounded px-1.5 py-1 hover:bg-gray-300 dark:hover:bg-gray-600"
