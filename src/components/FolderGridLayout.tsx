@@ -132,7 +132,7 @@ const FolderGridLayout = ({
                   >
                     <FontAwesomeIcon icon={['far', 'copy']} />
                   </span>
-                  /* To hide the Download Button of any Folders. 
+                  {/* To hide the Download Button of any Folders. 
                   {folderGenerating[c.id] ? (
                     <Downloading title={t('Downloading folder, refresh page to cancel')} style="px-1.5 py-1" />
                   ) : (
@@ -144,7 +144,7 @@ const FolderGridLayout = ({
                       <FontAwesomeIcon icon={['far', 'arrow-alt-circle-down']} />
                     </span>
                   )}
-                  */ To hide the Download Button of any Folders. 
+                  To hide the Download Button of any Folders. */}
                 </div>
               ) : (
                 <div>
