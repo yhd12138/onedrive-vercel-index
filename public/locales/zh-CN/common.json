@@ -35,7 +35,7 @@
   "Do not pretend to be the site owner": "你不是网站所有者",
   "Don't worry, after storing them, onedrive-vercel-index will take care of token refreshes and updates after your site goes live.": "别担心，存储它们之后，onedrive-vercel-index 会在帮助你定时更新 token",
   "Download": "下载",
-  "Download via Proxy": "使用代理下载"
+  "Download via Proxy": "使用代理下载",
   "Download file": "下载此文件",
   "Download folder": "下载此文件夹",
   "Download selected files": "下载选定文件",
