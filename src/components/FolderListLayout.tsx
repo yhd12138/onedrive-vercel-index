@@ -15,6 +15,7 @@ import { getStoredToken } from '../utils/protectedRouteHandler'
 
 let host_direct:string='onedrive.yhdog.xyz';
 let host_proxy:string='repo.yhdog.xyz';
+let host_proxy6:string='repo6.yhdog.xyz';
 
 const FileListItem: FC<{ fileContent: OdFolderChildren }> = ({ fileContent: c }) => {
   return (
@@ -174,16 +175,23 @@ const FolderListLayout = ({
               </span>
               To hide the Copy Button of any Items. */}
               <a
-                title={t('Download file')}
+                title={t('OneDrive Direct Download')}
                 className="cursor-pointer rounded px-1.5 py-1 hover:bg-gray-300 dark:hover:bg-gray-600"
                 href={`https://${host_direct}/api/raw/?path=${getItemPath(c.name)}${hashedToken ? `&odpt=${hashedToken}` : ''}`}
               >
                 <FontAwesomeIcon icon={['far', 'arrow-alt-circle-down']} />
               </a>
               <a
-                title={t('Download file via Proxy')}
+                title={t('Proxy Download (IPv4)')}
                 className="cursor-pointer rounded px-1.5 py-1 hover:bg-gray-300 dark:hover:bg-gray-600"
                 href={`https://${host_proxy}/api/raw/?path=${getItemPath(c.name)}${hashedToken ? `&odpt=${hashedToken}` : ''}`}
+              >
+                <FontAwesomeIcon icon={['far', 'arrow-alt-circle-down']} />
+              </a>
+              <a
+                title={t('Proxy Download (IPv6)')}
+                className="cursor-pointer rounded px-1.5 py-1 hover:bg-gray-300 dark:hover:bg-gray-600"
+                href={`https://${host_proxy6}/api/raw/?path=${getItemPath(c.name)}${hashedToken ? `&odpt=${hashedToken}` : ''}`}
               >
                 <FontAwesomeIcon icon={['far', 'arrow-alt-circle-down']} />
               </a>
