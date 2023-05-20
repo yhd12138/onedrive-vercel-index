@@ -109,9 +109,9 @@ const DownloadButtonGroup = () => {
         {/* To hide the copy link Button. 
         <DownloadButton
           onClickCallback={() => {
-            {/* To replace the direct link of a file. 
+            // To replace the direct link of a file. 
             clipboard.copy(`${getBaseUrl()}/api/raw/?path=${asPath}${hashedToken ? `&odpt=${hashedToken}` : ''}`)
-            To replace the direct link of a file. */}
+            // To replace the direct link of a file. 
             clipboard.copy(`https://${host_direct}/api/raw/?path=${asPath}${hashedToken ? `&odpt=${hashedToken}` : ''}`)
             toast.success(t('Copied direct link to clipboard.'))
           }}
