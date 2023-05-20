@@ -13,6 +13,7 @@ import { getStoredToken } from '../utils/protectedRouteHandler'
 
 let host_direct:string='onedrive.yhdog.xyz';
 let host_proxy:string='repo.yhdog.xyz';
+let host_proxy6:string='repo6.yhdog.xyz';
 
 const GridItem = ({ c, path }: { c: OdFolderChildren; path: string }) => {
   // We use the generated medium thumbnail for rendering preview images (excluding folders)
