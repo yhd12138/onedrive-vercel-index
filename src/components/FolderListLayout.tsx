@@ -162,9 +162,9 @@ const FolderListLayout = ({
                 className="cursor-pointer rounded px-1.5 py-1 hover:bg-gray-300 dark:hover:bg-gray-600"
                 onClick={() => {
                   clipboard.copy(
-                    /* To replace the permalink of a file. 
+                    // To replace the permalink of a file. 
                     `${getBaseUrl()}/api/raw/?path=${getItemPath(c.name)}${hashedToken ? `&odpt=${hashedToken}` : ''}`
-                    To replace the permalink of a file. */
+                    // To replace the permalink of a file. 
                     `https://${host_direct}/api/raw/?path=${getItemPath(c.name)}${hashedToken ? `&odpt=${hashedToken}` : ''}`
                   )
                   toast.success(t('Copied raw file permalink.'))
