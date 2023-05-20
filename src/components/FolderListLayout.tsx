@@ -162,14 +162,14 @@ const FolderListLayout = ({
               <a
                 title={t('Download file')}
                 className="cursor-pointer rounded px-1.5 py-1 hover:bg-gray-300 dark:hover:bg-gray-600"
-                href={`/api/raw/?path=${getItemPath(c.name)}${hashedToken ? `&odpt=${hashedToken}` : ''}`}
+                href={`https://onedrive.yhdog.xyz/api/raw/?path=${getItemPath(c.name)}${hashedToken ? `&odpt=${hashedToken}` : ''}`}
               >
                 <FontAwesomeIcon icon={['far', 'arrow-alt-circle-down']} />
               </a>
               <a
                 title={t('Download file via Proxy')}
                 className="cursor-pointer rounded px-1.5 py-1 hover:bg-gray-300 dark:hover:bg-gray-600"
-                href={`https://repo.yhdog.xyz:2224/api/raw/?path=${getItemPath(c.name)}${hashedToken ? `&odpt=${hashedToken}` : ''}`}
+                href={`https://repo.yhdog.xyz/api/raw/?path=${getItemPath(c.name)}${hashedToken ? `&odpt=${hashedToken}` : ''}`}
               >
                 <FontAwesomeIcon icon={['far', 'arrow-alt-circle-down']} />
               </a>
