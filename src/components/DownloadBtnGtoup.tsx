@@ -42,7 +42,6 @@ export const DownloadButton = ({
   btnIcon,
   btnImage,
   btnTitle,
-  btnHref,
 }: {
   onClickCallback: MouseEventHandler<HTMLButtonElement>
   btnColor?: string
@@ -50,7 +49,6 @@ export const DownloadButton = ({
   btnIcon?: IconProp
   btnImage?: string
   btnTitle?: string
-  btnHref?: string
 }) => {
   return (
     <button
@@ -59,7 +57,6 @@ export const DownloadButton = ({
       )}`}
       title={btnTitle}
       onClick={onClickCallback}
-      href={btnHref}
     >
       {btnIcon && <FontAwesomeIcon icon={btnIcon} />}
       {btnImage && <Image src={btnImage} alt={btnImage} width={20} height={20} priority />}
@@ -81,21 +78,21 @@ const DownloadButtonGroup = () => {
     <>
       <CustomEmbedLinkMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} path={asPath} />
       <div className="flex flex-wrap justify-center gap-2">
-        <DownloadButton
-          onClickCallback={() => window.open(`https://${host_direct}/api/raw/?path=${asPath}${hashedToken ? `&odpt=${hashedToken}` : ''}`)}
-          btnColor="blue"
-          btnText={t('Download')}
-          btnIcon="file-download"
-          btnTitle={t('Download the file directly through OneDrive')}
-          btnHref={t(`https://${host_direct}/api/raw/?path=${asPath}${hashedToken ? `&odpt=${hashedToken}` : ''}`)}
-        />
+        <a href={`https://${host_direct}/api/raw/?path=${getItemPath(c.name)}${hashedToken ? `&odpt=${hashedToken}` : ''}`}>
+          <DownloadButton
+            onClickCallback={() => window.open(`https://${host_direct}/api/raw/?path=${asPath}${hashedToken ? `&odpt=${hashedToken}` : ''}`)}
+            btnColor="blue"
+            btnText={t('Download')}
+            btnIcon="file-download"
+            btnTitle={t('Download the file directly through OneDrive')}
+          />
+        </a>
         <DownloadButton
           onClickCallback={() => window.open(`https://${host_proxy}/api/raw/?path=${asPath}${hashedToken ? `&odpt=${hashedToken}` : ''}`)}
           btnColor="blue"
           btnText={t('Download via Proxy')}
           btnIcon="file-download"
           btnTitle={t('Download the file via a remote server')}
-          btnHref={t(`https://${host_proxy}/api/raw/?path=${asPath}${hashedToken ? `&odpt=${hashedToken}` : ''}`)}
         />
         <DownloadButton
           onClickCallback={() => {
