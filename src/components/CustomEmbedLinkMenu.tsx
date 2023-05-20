@@ -8,6 +8,10 @@ import { getBaseUrl } from '../utils/getBaseUrl'
 import { getStoredToken } from '../utils/protectedRouteHandler'
 import { getReadablePath } from '../utils/getReadablePath'
 
+let host_direct:string='onedrive.yhdog.xyz';
+let host_proxy:string='repo.yhdog.xyz';
+let host_proxy6:string='repo6.yhdog.xyz';
+
 function LinkContainer({ title, value }: { title: string; value: string }) {
   const clipboard = useClipboard({ copiedTimeout: 1000 })
   return (
@@ -105,21 +109,21 @@ export default function CustomEmbedLinkMenu({
 
                 <LinkContainer
                   title={t('Default')}
-                  value={`${getBaseUrl()}/api/raw/?path=${readablePath}${hashedToken ? `&odpt=${hashedToken}` : ''}`}
+                  value={`https://${host_direct}/api/raw/?path=${readablePath}${hashedToken ? `&odpt=${hashedToken}` : ''}`}
                 />
                 <LinkContainer
                   title={t('URL encoded')}
-                  value={`${getBaseUrl()}/api/raw/?path=${path}${hashedToken ? `&odpt=${hashedToken}` : ''}`}
+                  value={`https://${host_direct}/api/raw/?path=${path}${hashedToken ? `&odpt=${hashedToken}` : ''}`}
                 />
                 <LinkContainer
                   title={t('Customised')}
-                  value={`${getBaseUrl()}/api/name/${name}?path=${readablePath}${
+                  value={`https://${host_direct}/api/name/${name}?path=${readablePath}${
                     hashedToken ? `&odpt=${hashedToken}` : ''
                   }`}
                 />
                 <LinkContainer
                   title={t('Customised and encoded')}
-                  value={`${getBaseUrl()}/api/name/${name}?path=${path}${hashedToken ? `&odpt=${hashedToken}` : ''}`}
+                  value={`https://${host_direct}/api/name/${name}?path=${path}${hashedToken ? `&odpt=${hashedToken}` : ''}`}
                 />
               </div>
             </div>
