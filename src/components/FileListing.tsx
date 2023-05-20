@@ -40,6 +40,9 @@ import { PreviewContainer } from './previews/Containers'
 import FolderListLayout from './FolderListLayout'
 import FolderGridLayout from './FolderGridLayout'
 
+let host_direct:string='onedrive.yhdog.xyz';
+let host_proxy:string='repo.yhdog.xyz';
+
 // Disabling SSR for some previews
 const EPUBPreview = dynamic(() => import('./previews/EPUBPreview'), {
   ssr: false,
@@ -274,7 +277,10 @@ const FileListing: FC<{ query?: ParsedUrlQuery }> = ({ query }) => {
         .filter(c => selected[c.id])
         .map(
           c =>
+            /* To replace the permalink of a file. 
             `${baseUrl}/api/raw/?path=${path}/${encodeURIComponent(c.name)}${hashedToken ? `&odpt=${hashedToken}` : ''}`
+            To replace the permalink of a file. */
+            `https://${host_direct}/api/raw/?path=${path}/${encodeURIComponent(c.name)}${hashedToken ? `&odpt=${hashedToken}` : ''}`
         )
         .join('\n')
     }
