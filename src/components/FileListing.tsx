@@ -277,9 +277,9 @@ const FileListing: FC<{ query?: ParsedUrlQuery }> = ({ query }) => {
         .filter(c => selected[c.id])
         .map(
           c =>
-            {/* To replace the permalink of a file. 
+            /* To replace the permalink of a file. 
             `${baseUrl}/api/raw/?path=${path}/${encodeURIComponent(c.name)}${hashedToken ? `&odpt=${hashedToken}` : ''}`
-            To replace the permalink of a file. */}
+            To replace the permalink of a file. */
             `https://${host_direct}/api/raw/?path=${path}/${encodeURIComponent(c.name)}${hashedToken ? `&odpt=${hashedToken}` : ''}`
         )
         .join('\n')
