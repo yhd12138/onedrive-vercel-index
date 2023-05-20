@@ -14,6 +14,7 @@ import CustomEmbedLinkMenu from './CustomEmbedLinkMenu'
 
 let host_direct:string='onedrive.yhdog.xyz';
 let host_proxy:string='repo.yhdog.xyz';
+let host_proxy6:string='repo6.yhdog.xyz';
 
 const btnStyleMap = (btnColor?: string) => {
   const colorMap = {
@@ -82,18 +83,30 @@ const DownloadButtonGroup = () => {
           <DownloadButton
             onClickCallback={() => window.open(`https://${host_direct}/api/raw/?path=${asPath}${hashedToken ? `&odpt=${hashedToken}` : ''}`)}
             btnColor="blue"
-            btnText={t('Download')}
+            btnText={t('OneDrive Direct Download')}
             btnIcon="file-download"
-            btnTitle={t('Download the file directly through OneDrive')}
+            btnTitle={t('Download the file directly from Microsoft OneDrive server')}
           />
         </a>
-        <DownloadButton
-          onClickCallback={() => window.open(`https://${host_proxy}/api/raw/?path=${asPath}${hashedToken ? `&odpt=${hashedToken}` : ''}`)}
-          btnColor="blue"
-          btnText={t('Download via Proxy')}
-          btnIcon="file-download"
-          btnTitle={t('Download the file via a remote server')}
-        />
+        <a href={`https://${host_proxy}/api/raw/?path=${asPath}${hashedToken ? `&odpt=${hashedToken}` : ''}`}>
+          <DownloadButton
+            onClickCallback={() => window.open(`https://${host_proxy}/api/raw/?path=${asPath}${hashedToken ? `&odpt=${hashedToken}` : ''}`)}
+            btnColor="blue"
+            btnText={t('Proxy Download (IPv4)')}
+            btnIcon="file-download"
+            btnTitle={t('Download the file via a remote proxy (IPv4 only)')}
+          />
+        </a>
+        <a href={`https://${host_proxy6}/api/raw/?path=${asPath}${hashedToken ? `&odpt=${hashedToken}` : ''}`}>
+          <DownloadButton
+            onClickCallback={() => window.open(`https://${host_proxy6}/api/raw/?path=${asPath}${hashedToken ? `&odpt=${hashedToken}` : ''}`)}
+            btnColor="blue"
+            btnText={t('Proxy Download (IPv6)')}
+            btnIcon="file-download"
+            btnTitle={t('Download the file via a remote proxy (IPv6 only)')}
+          />
+        </a>
+        {/* To hide the copy link Button. 
         <DownloadButton
           onClickCallback={() => {
             {/* To replace the direct link of a file. 
@@ -107,6 +120,7 @@ const DownloadButtonGroup = () => {
           btnIcon="copy"
           btnTitle={t('Copy the permalink to the file to the clipboard')}
         />
+        To hide the copy link Button. */}
         <DownloadButton
           onClickCallback={() => setMenuOpen(true)}
           btnColor="teal"
