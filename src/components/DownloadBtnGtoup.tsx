@@ -87,7 +87,7 @@ const DownloadButtonGroup = () => {
           btnText={t('Download')}
           btnIcon="file-download"
           btnTitle={t('Download the file directly through OneDrive')}
-          btnHref=`https://${host_direct}/api/raw/?path=${asPath}${hashedToken ? `&odpt=${hashedToken}` : ''}`
+          btnHref={t(`https://${host_direct}/api/raw/?path=${asPath}${hashedToken ? `&odpt=${hashedToken}` : ''}`)}
         />
         <DownloadButton
           onClickCallback={() => window.open(`https://${host_proxy}/api/raw/?path=${asPath}${hashedToken ? `&odpt=${hashedToken}` : ''}`)}
@@ -95,7 +95,7 @@ const DownloadButtonGroup = () => {
           btnText={t('Download via Proxy')}
           btnIcon="file-download"
           btnTitle={t('Download the file via a remote server')}
-          btnHref=`https://${host_direct}/api/raw/?path=${asPath}${hashedToken ? `&odpt=${hashedToken}` : ''}`
+          btnHref={t(`https://${host_proxy}/api/raw/?path=${asPath}${hashedToken ? `&odpt=${hashedToken}` : ''}`)}
         />
         <DownloadButton
           onClickCallback={() => {
