@@ -143,7 +143,7 @@ const FolderListLayout = ({
                   <FontAwesomeIcon icon={['far', 'arrow-alt-circle-down']} />
                 </span>
               )}
-              To hide the Download Button of any Folders. */}
+              To hide the Download Button of any Folders. */
             </div>
           ) : (
             <div className="hidden p-1.5 text-gray-700 dark:text-gray-400 md:flex">
