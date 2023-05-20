@@ -99,7 +99,7 @@ const DownloadButtonGroup = () => {
             {/* To replace the direct link of a file. 
             clipboard.copy(`${getBaseUrl()}/api/raw/?path=${asPath}${hashedToken ? `&odpt=${hashedToken}` : ''}`)
             To replace the direct link of a file. */}
-            clipboard.copy(`https://${host_direct()}/api/raw/?path=${asPath}${hashedToken ? `&odpt=${hashedToken}` : ''}`)
+            clipboard.copy(`https://${host_direct}/api/raw/?path=${asPath}${hashedToken ? `&odpt=${hashedToken}` : ''}`)
             toast.success(t('Copied direct link to clipboard.'))
           }}
           btnColor="pink"
