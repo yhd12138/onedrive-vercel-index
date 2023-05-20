@@ -101,7 +101,7 @@ const FolderGridLayout = ({
           >
             <FontAwesomeIcon icon={['far', 'copy']} size="lg" />
           </button>
-		  {/* To hide the Download Button of selected Items. 
+	  {/* To hide the Download Button of selected Items. 
           {totalGenerating ? (
             <Downloading title={t('Downloading selected files, refresh page to cancel')} style="p-1.5" />
           ) : (
@@ -131,10 +131,10 @@ const FolderGridLayout = ({
                     title={t('Copy folder permalink')}
                     className="cursor-pointer rounded px-1.5 py-1 hover:bg-gray-300 dark:hover:bg-gray-600"
                     onClick={() => {
-					  {/* To replace the permalink of a folder. 
+                      {/* To replace the permalink of a folder. 
                       clipboard.copy(`${getBaseUrl()}${getItemPath(c.name)}`)
-					  To replace the permalink of a folder. */}
-					  clipboard.copy(`https://${host_direct}${getItemPath(c.name)}`)
+                      To replace the permalink of a folder. */}
+                      clipboard.copy(`https://${host_direct}${getItemPath(c.name)}`)
                       toast(t('Copied folder permalink.'), { icon: '👌' })
                     }}
                   >
@@ -156,7 +156,7 @@ const FolderGridLayout = ({
                 </div>
               ) : (
                 <div>
-				  {/* To hide the Copy Button of any Items. 
+                  {/* To hide the Copy Button of any Items. 
                   <span
                     title={t('Copy raw file permalink')}
                     className="cursor-pointer rounded px-1.5 py-1 hover:bg-gray-300 dark:hover:bg-gray-600"
@@ -171,7 +171,7 @@ const FolderGridLayout = ({
                   >
                     <FontAwesomeIcon icon={['far', 'copy']} />
                   </span>
-				  To hide the Copy Button of any Items. */}
+                  To hide the Copy Button of any Items. */}
                   <a
                     title={t('Download file')}
                     className="cursor-pointer rounded px-1.5 py-1 hover:bg-gray-300 dark:hover:bg-gray-600"
