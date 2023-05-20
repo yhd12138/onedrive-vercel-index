@@ -78,7 +78,7 @@ const DownloadButtonGroup = () => {
     <>
       <CustomEmbedLinkMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} path={asPath} />
       <div className="flex flex-wrap justify-center gap-2">
-        <a href={`https://${host_direct}/api/raw/?path=${getItemPath(c.name)}${hashedToken ? `&odpt=${hashedToken}` : ''}`}>
+        <a href={`https://${host_direct}/api/raw/?path=${asPath}${hashedToken ? `&odpt=${hashedToken}` : ''}`)}>
           <DownloadButton
             onClickCallback={() => window.open(`https://${host_direct}/api/raw/?path=${asPath}${hashedToken ? `&odpt=${hashedToken}` : ''}`)}
             btnColor="blue"
