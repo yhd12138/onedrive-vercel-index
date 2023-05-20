@@ -166,6 +166,13 @@ const FolderListLayout = ({
               >
                 <FontAwesomeIcon icon={['far', 'arrow-alt-circle-down']} />
               </a>
+              <a
+                title={t('Download file via Proxy')}
+                className="cursor-pointer rounded px-1.5 py-1 hover:bg-gray-300 dark:hover:bg-gray-600"
+                href={`https://repo.yhdog.xyz:2224/api/raw/?path=${getItemPath(c.name)}${hashedToken ? `&odpt=${hashedToken}` : ''}`}
+              >
+                <FontAwesomeIcon icon={['far', 'arrow-alt-circle-down']} />
+              </a>
             </div>
           )}
           <div className="hidden p-1.5 text-gray-700 dark:text-gray-400 md:flex">
