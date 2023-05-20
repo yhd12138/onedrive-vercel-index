@@ -83,6 +83,13 @@ const DownloadButtonGroup = () => {
           btnTitle={t('Download the file directly through OneDrive')}
         />
         <DownloadButton
+          onClickCallback={() => window.open(`/proxy/api/raw/?path=${asPath}${hashedToken ? `&odpt=${hashedToken}` : ''}`)}
+          btnColor="blue"
+          btnText={t('Download via Proxy')}
+          btnIcon="file-download"
+          btnTitle={t('Download the file via a remote server')}
+        />
+        <DownloadButton
           onClickCallback={() => {
             clipboard.copy(`${getBaseUrl()}/api/raw/?path=${asPath}${hashedToken ? `&odpt=${hashedToken}` : ''}`)
             toast.success(t('Copied direct link to clipboard.'))
