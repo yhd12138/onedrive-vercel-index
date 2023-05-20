@@ -25,8 +25,8 @@
   "Copy folder permalink": "复制文件夹永久链接",
   "Copy raw file permalink": "复制文件永久链接",
   "Copy the permalink to the file to the clipboard": "复制文件永久链接到剪贴板",
-  "Customise direct link": "自定义文件直链",
-  "Customise link": "自定义直链",
+  "Customise direct link": "自定义直链",
+  "Customise link": "自定义链接",
   "Customised": "自定义链接",
   "Customised and encoded": "URL 编码的自定义链接",
   "Copy selected files permalink": "复制选定文件永久链接",
@@ -35,7 +35,6 @@
   "Do not pretend to be the site owner": "你不是网站所有者",
   "Don't worry, after storing them, onedrive-vercel-index will take care of token refreshes and updates after your site goes live.": "别担心，存储它们之后，onedrive-vercel-index 会在帮助你定时更新 token",
   "Download": "下载",
-  "Download via Proxy": "使用代理下载",
   "Download file": "下载此文件",
   "Download folder": "下载此文件夹",
   "Download selected files": "下载选定文件",
@@ -115,5 +114,11 @@
   "Welcome to your new onedrive-vercel-index 🎉": "欢迎来到你崭新的 onedrive-vercel-index 🎉",
   "What is this?": "这是什么？",
   "Where is the auth code? Did you follow step 2 you silly donut?": "授权码呢？你遵守了第 2 步吗？你这个傻瓜甜甜圈！o(￣ヘ￣o＃)",
-  "Whoops, looks like we got a problem: {{error}}.": "Whoops，看来我们遇到了一个问题：{{error}}"
+  "Whoops, looks like we got a problem: {{error}}.": "Whoops，看来我们遇到了一个问题：{{error}}",
+  "OneDrive Direct Download": "OneDrive 直接下载",
+  "Proxy Download (IPv4)": "中转下载（IPv4）",
+  "Proxy Download (IPv6)": "中转下载（IPv6）",
+  "Download the file directly from Microsoft OneDrive server": "直接从 Microsoft OneDrive 服务器下载文件",
+  "Download the file via a remote proxy (IPv4 only)": "从远程中转服务器下载文件（仅 IPv4）",
+  "Download the file via a remote proxy (IPv6 only)": "从远程中转服务器下载文件（仅 IPv6）"
 }
