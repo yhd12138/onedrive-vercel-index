@@ -79,7 +79,7 @@ const DownloadButtonGroup = () => {
     <>
       <CustomEmbedLinkMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} path={asPath} />
       <div className="flex flex-wrap justify-center gap-2">
-        <a href={`https://${host_direct}/api/raw/?path=${asPath}${hashedToken ? `&odpt=${hashedToken}` : ''}`}>
+        <a href={`https://${host_direct}/api/raw/?path=${asPath}${hashedToken ? `&odpt=${hashedToken}` : ''}`} onClick={(event) => { event.preventDefault(); }}>
           <DownloadButton
             onClickCallback={() => window.open(`https://${host_direct}/api/raw/?path=${asPath}${hashedToken ? `&odpt=${hashedToken}` : ''}`)}
             btnColor="blue"
@@ -88,7 +88,7 @@ const DownloadButtonGroup = () => {
             btnTitle={t('Download the file directly from Microsoft OneDrive server')}
           />
         </a>
-        <a href={`https://${host_proxy}/api/raw/?path=${asPath}${hashedToken ? `&odpt=${hashedToken}` : ''}`}>
+        <a href={`https://${host_proxy}/api/raw/?path=${asPath}${hashedToken ? `&odpt=${hashedToken}` : ''}`} onClick={(event) => { event.preventDefault(); }}>
           <DownloadButton
             onClickCallback={() => window.open(`https://${host_proxy}/api/raw/?path=${asPath}${hashedToken ? `&odpt=${hashedToken}` : ''}`)}
             btnColor="blue"
@@ -97,7 +97,7 @@ const DownloadButtonGroup = () => {
             btnTitle={t('Download the file via a remote proxy (IPv4 only)')}
           />
         </a>
-        <a href={`https://${host_proxy6}/api/raw/?path=${asPath}${hashedToken ? `&odpt=${hashedToken}` : ''}`}>
+        <a href={`https://${host_proxy6}/api/raw/?path=${asPath}${hashedToken ? `&odpt=${hashedToken}` : ''}`} onClick={(event) => { event.preventDefault(); }}>
           <DownloadButton
             onClickCallback={() => window.open(`https://${host_proxy6}/api/raw/?path=${asPath}${hashedToken ? `&odpt=${hashedToken}` : ''}`)}
             btnColor="blue"
